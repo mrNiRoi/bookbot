@@ -22,7 +22,7 @@ def main():
     last_list = sort_dict(num_char)
 
 
-    print(f"============ BOOKBOT ============\nAnalyzing book found at books/frankenstein.txt...")
+    print(f"============ BOOKBOT ============\nAnalyzing book found at {path_to_book}")
     print(f"----------- Word Count ----------\nFound {num_words} total words")
     print(f"--------- Character Count -------")
 
