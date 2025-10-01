@@ -5,7 +5,6 @@ def get_num_words(content):
 
 def get_num_char(text):
     char_num_dict = {}
-
     for char in text:
         c = char.lower()
         if c not in char_num_dict:
@@ -14,22 +13,13 @@ def get_num_char(text):
             char_num_dict[c] += 1
     return char_num_dict
 
-    
-def sort_on(items):
-    return items["num"]
-
 def sort_dict(dict):
     last_list = []
-
     for key in dict:
         temp_dict = {
             "char": key,
             "num": dict[key],
         }
         last_list.append(temp_dict)
-    
-    last_list.sort(reverse=True, key=sort_on)
+    last_list.sort(reverse=True, key=lambda item: item["num"])
     return last_list
-
-
-
